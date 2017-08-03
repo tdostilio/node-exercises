@@ -51,8 +51,7 @@ function SaveFile() {
                 return;
             }
             let content = buffer.toString();
-            fs.writeFile(outputFile, content, ()=> {
-                console.log('Completed')});
+            fs.writeFile(outputFile, content);
             });
         });
     })
