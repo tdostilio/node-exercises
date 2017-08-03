@@ -41,21 +41,42 @@ const rl = readLine.createInterface({
 // })
 
 //##### Exercise 3
-function SaveFile() {
-    rl.question('What is the input filename: ', (inputFile) => {
-        rl.question('What is the output file: ', (outputFile) => {
-            rl.close();
-            fs.readFile(inputFile, (err, buffer) => {
-            if (err) {
-                console.log(err.message);
-                return;
-            }
-            let content = buffer.toString();
-            fs.writeFile(outputFile, content, ()=> {
-                console.log('Completed')});
-            });
-        });
-    })
-}
+// function SaveFile() {
+//     rl.question('What is the input filename: ', (inputFile) => {
+//         rl.question('What is the output file: ', (outputFile) => {
+//             rl.close();
+//             fs.readFile(inputFile, (err, buffer) => {
+//             if (err) {
+//                 console.log(err.message);
+//                 return;
+//             }
+//             let content = buffer.toString();
+//             let upcased = content.toUpperCase(); 
+//             fs.writeFile(outputFile, upcased, ()=> {
+//                 console.log('Completed')});
+//             });
+//         });
+//     })
+// }
 
-SaveFile();
+// SaveFile();
+
+// // ###EXERCISE 4
+
+// const request = require('request');
+
+// rl.question('URL: ', (url) => {
+//     rl.question('Save to file: ', (filename) => {
+//         rl.close();
+//         request('http://'+url, (error, response, body) => {
+//             console.log('error: ')
+//             console.log('statusCode: ', response && response.statusCode);
+//             fs.writeFile(filename, body, () => {
+//                 console.log('Completed')
+//             })
+//         })
+//     })
+// })
+
+
+
